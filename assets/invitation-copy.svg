@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="650" viewBox="0 0 1400 650">
+  <style>
+    @font-face { font-family: DecorKZ; src: url('fonts/decor.ttf') format('truetype'); }
+    .body { fill:#806534; font-family: Georgia, 'Times New Roman', serif; font-size:48px; }
+    .lead { fill:#9a6d27; font-weight:600; }
+    .name { fill:#ac7623; font-family: DecorKZ, Georgia, serif; font-size:136px; }
+  </style>
+  <text class="body lead" x="700" y="78" text-anchor="middle">Құрметті ағайын-туыс, құда-жекжат, дос-жаран!</text>
+  <text class="body" x="700" y="180" text-anchor="middle">Сіздерді аяулы қызымыз</text>
+  <text class="name" x="700" y="335" text-anchor="middle">Эльвираның</text>
+  <text class="body" x="700" y="444" text-anchor="middle">Ұзату тойының қадірлі қонағы болуға</text>
+  <text class="body" x="700" y="524" text-anchor="middle">шын жүректен шақырамыз!</text>
+</svg>

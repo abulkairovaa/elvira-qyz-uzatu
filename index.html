@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="kk" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elvira — Qyz Uzatu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="music" id="musicButton" type="button" aria-pressed="false" aria-label="Музыканы қосу" title="Музыканы қосу">
+    <span class="music__note" aria-hidden="true">♪</span><span id="musicLabel" class="sr-only">Музыка</span>
+  </button>
+  <audio id="musicTrack" loop preload="auto" autoplay>
+    <source src="assets/background-music.mp4" type="audio/mp4">
+  </audio>
+
+  <main class="invitation">
+    <div class="petal petal--one"></div><div class="petal petal--two"></div><div class="petal petal--three"></div>
+    <section class="hero" aria-label="Шақыру">
+      <div class="hanging-garden" aria-hidden="true">
+        <span class="vine v1"><i></i></span><span class="vine v2"><i></i></span><span class="vine v3"><i></i></span><span class="vine v4"><i></i></span><span class="vine v5"><i></i></span><span class="vine v6"><i></i></span><span class="vine v7"><i></i></span>
+      </div>
+      <div class="hero__copy reveal">
+        <h1>Elvira</h1>
+        <div class="ornament"><span></span>❦<span></span></div>
+        <h2>QYZ UZATU</h2>
+      </div>
+      <div class="dragonfly dragonfly--left" aria-hidden="true"></div>
+      <div class="dragonfly dragonfly--right" aria-hidden="true"></div>
+    </section>
+
+    <section class="details reveal">
+      <div class="floral-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="invitation-text">
+        <p><strong>Құрметті ағайын-туыс, құда-жекжат, дос-жаран!</strong></p>
+        <p>Сіздерді аяулы қызымыз</p>
+        <img class="bride-name-image" src="assets/elvira-light-calligraphy-transparent.png" alt="Эльвираның">
+        <p><strong class="event-name">Ұзату тойының</strong> қадірлі қонағы болуға<br>шын жүректен шақырамыз!</p>
+      </div>
+      <p class="section-title">Той салтанаты</p>
+      <div class="date-card">
+        <div class="date-card__day">
+          <i></i><b>25 ҚЫРКҮЙЕК<br>2026</b><i></i><span class="clock">◷</span><strong>18:00</strong>
+        </div>
+        <div class="calendar">
+          <div class="week"><span>ДС</span><span>СС</span><span>СР</span><span>БС</span><span>ЖМ</span><span>СБ</span><span>ЖС</span></div>
+          <div class="dates">
+            <span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+            <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+            <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+            <span>21</span><span>22</span><span>23</span><span>24</span><span class="selected">25</span><span>26</span><span>27</span>
+            <span>28</span><span>29</span><span>30</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="venue reveal animated-section animated-section--venue">
+      <div class="ornament"><span></span>❦<span></span></div>
+      <p class="section-title">МЕКЕН ЖАЙЫМЫЗ</p>
+      <p>“GRAND HALL”<br><small>Базарбай Жұманиязов көшесі, 116/1<br>Орал қаласы</small></p>
+      <a class="map-link" href="https://2gis.kz/uralsk/geo/70000001037694513" target="_blank" rel="noreferrer">Картадан ашу</a>
+    </section>
+
+    <section class="countdown reveal animated-section animated-section--countdown" data-event-date="2026-09-25T18:00:00+05:00">
+      <p class="section-title">ТОЙҒА ДЕЙІН</p>
+      <div class="countdown__grid" aria-label="Тойға дейінгі уақыт">
+        <div><b id="countDays">00</b><span>КҮН</span></div><div><b id="countHours">00</b><span>САҒАТ</span></div><div><b id="countMinutes">00</b><span>МИНУТ</span></div><div><b id="countSeconds">00</b><span>СЕКУНД</span></div>
+      </div>
+    </section>
+
+    <div class="hosts-live"><span>ТОЙ ИЕЛЕРІ</span><b>Жақсылық – Гульжиян</b></div>
+
+    <section class="rsvp reveal animated-section animated-section--rsvp" id="rsvp">
+      <p class="section-title">ҚАТЫСУЫҢЫЗДЫ РАСТАҢЫЗ</p>
+      <p class="rsvp__lead">Сізді осы ерекше кеште күтеміз</p>
+      <form id="rsvpForm">
+        <label>Аты-жөніңіз<input name="name" required placeholder="Атыңызды жазыңыз"></label>
+        <fieldset><legend>Қатыса аласыз ба?</legend><label><input type="radio" name="attendance" value="Иә, барамын" required> Иә, барамын</label><label><input type="radio" name="attendance" value="Иә, жұбайыммен барамын"> Иә, жұбайыммен барамын</label><label><input type="radio" name="attendance" value="Өкінішке орай, бара алмаймын"> Бара алмаймын</label></fieldset>
+        <button class="send" type="submit">Жіберу</button>
+      </form>
+      <p class="form-message" id="formMessage" role="status"></p>
+    </section>
+    <div class="bottom-flowers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
